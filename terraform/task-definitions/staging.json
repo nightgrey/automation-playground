@@ -1,0 +1,28 @@
+[
+  {
+    "name": "staging",
+    "dnssearchdomains": null,
+    "logconfiguration": {
+      "logdriver": "awslogs",
+      "options": {
+        "awslogs-group": "/ecs/automation-playground",
+        "awslogs-region": "eu-central-1",
+        "awslogs-stream-prefix": "ecs"
+      }
+    },
+    "portmappings": [
+      {
+        "hostport": 3000,
+        "protocol": "tcp",
+        "containerport": 3000
+      },
+      {
+        "hostport": 3000,
+        "protocol": "udp",
+        "containerport": 3000
+      }
+    ],
+    "cpu": 0,
+    "image": "${image}"
+  }
+]
