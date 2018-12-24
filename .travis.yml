@@ -8,7 +8,7 @@ before_install:
 script:
 - eval $(aws ecr get-login --no-include-email --region eu-central-1)
 - docker build -t automation-playground .
-- docker tag automation-playground:$(TRAVIS_BUILD_NUMBER) 171073518588.dkr.ecr.eu-central-1.amazonaws.com/automation-playground:latest
+- docker tag automation-playground:latest 171073518588.dkr.ecr.eu-central-1.amazonaws.com/automation-playground:latest
 - docker push 171073518588.dkr.ecr.eu-central-1.amazonaws.com/automation-playground:latest
 env:
   global:
